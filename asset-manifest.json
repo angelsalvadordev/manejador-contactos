@@ -1,0 +1,16 @@
+{
+  "files": {
+    "main.css": "/manejador-contenidos/static/css/main.5a30c905.chunk.css",
+    "main.js": "/manejador-contenidos/static/js/main.a6a68b87.chunk.js",
+    "main.js.map": "/manejador-contenidos/static/js/main.a6a68b87.chunk.js.map",
+    "runtime~main.js": "/manejador-contenidos/static/js/runtime~main.2083fcfc.js",
+    "runtime~main.js.map": "/manejador-contenidos/static/js/runtime~main.2083fcfc.js.map",
+    "static/js/2.db3fd1cb.chunk.js": "/manejador-contenidos/static/js/2.db3fd1cb.chunk.js",
+    "static/js/2.db3fd1cb.chunk.js.map": "/manejador-contenidos/static/js/2.db3fd1cb.chunk.js.map",
+    "index.html": "/manejador-contenidos/index.html",
+    "precache-manifest.6e49ebc17e291a02161206cd1154405f.js": "/manejador-contenidos/precache-manifest.6e49ebc17e291a02161206cd1154405f.js",
+    "service-worker.js": "/manejador-contenidos/service-worker.js",
+    "static/css/main.5a30c905.chunk.css.map": "/manejador-contenidos/static/css/main.5a30c905.chunk.css.map",
+    "static/media/main.css": "/manejador-contenidos/static/media/MaterialIcons-Regular.a37b0c01.ttf"
+  }
+}
