@@ -2,7 +2,7 @@
   "name": "manejador-contactos",
   "version": "0.1.0",
   "private": true,
-  "homepage": "https://angelsalvadordev.github.io/manejador-contenidos",
+  "homepage": "https://angelsalvadordev.github.io/manejador-contactos/",
   "dependencies": {
     "gh-pages": "^2.1.1",
     "node-sass": "^4.12.0",

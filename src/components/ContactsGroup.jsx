@@ -6,6 +6,19 @@ const ContactsGroup = () => {
 
     const { contacts, search } = useContext(ContactsContext)
 
+    const filterContacts = contact => {
+        // concatenar nombre: Ángel Salvador => ángelsalvador 
+        let completeName = `${contact.name} ${contact.surname}`
+        completeName = completeName.toLowerCase()
+
+        // Quitar tildes y ñ
+        completeName = normalizeName(completeName)
+        console.log(completeName)
+        // Buscar coincidencias de la busqueda
+        return completeName.includes(search)
+    }
+
+    // Normalizar nombre: ángelsalvador => angelsalvador
     const normalizeName = name => {
         name = name.replace(/á/gi, "a");
         name = name.replace(/é/gi, "e");
@@ -13,14 +26,7 @@ const ContactsGroup = () => {
         name = name.replace(/ó/gi, "o");
         name = name.replace(/ú/gi, "u");
         name = name.replace(/ñ/gi, "n");
-        console.log(name)
         return name;
-    }
-
-    const filterContacts = contact => {
-        let completeName = contact.name + contact.surname
-        completeName = normalizeName(completeName)
-        return completeName.includes(search)
     }
 
     return (
