@@ -1,0 +1,44 @@
+// Custom Colors
+$gray-1: #EFEFEF;
+$gray-2: #A1A1A1;
+$gray-3: #7B7B7B;
+$gray-4: #545454;
+$red-1:#F67878;
+$red-2:#D56363;
+
+// Custom Bootstrap
+$font-family-sans-serif: "Segoe UI";
+$h1-font-size: 1.2rem;
+$h2-font-size: .9rem;
+$headings-font-weight: 700;
+$body-color: $gray-4;
+
+$primary: $gray-4;
+$secondary: $gray-3;
+$light: $gray-1;
+$danger: $red-1;
+$border-danger: $red-2;
+
+// Principal Boostrap
+@import "../../bootstrap/scss/functions";
+@import "../../bootstrap/scss/variables";
+@import "../../bootstrap/scss/mixins";
+
+// Optional Bootstrap Styles
+@import "../../bootstrap/scss/reboot";
+@import "../../bootstrap/scss/grid";
+@import "../../bootstrap/scss/type";
+@import "../../bootstrap/scss/utilities";
+
+// Custom
+@import "./typo";
+
+// Components
+@import "./components/Intro";
+@import "./components/Searcher";
+@import "./components/Contact";
+
+.outline{
+    outline: 1px solid $red-2;
+}
+

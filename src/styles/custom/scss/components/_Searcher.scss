@@ -1,0 +1,28 @@
+.searcher{
+    border-radius: 5px;
+
+    &::before{
+        content:"search";
+        display: inline-block;
+        font-family: 'MaterialIcon';
+        margin-right: 2px;
+        color: $white;
+        font-size: 24px;
+    }
+
+    &__input{
+        display: inline-block;
+        outline: none;
+        border: none;
+        padding: 5px;
+
+        &::placeholder{
+            color: $white;
+        }
+    }
+}
+
+.search-icon{
+    border-radius: 5px 0 0 5px;
+    font-size: 24px;
+}
