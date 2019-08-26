@@ -1,16 +1,16 @@
 {
   "files": {
-    "main.css": "/manejador-contactos/static/css/main.5c49e8b2.chunk.css",
-    "main.js": "/manejador-contactos/static/js/main.563aef48.chunk.js",
-    "main.js.map": "/manejador-contactos/static/js/main.563aef48.chunk.js.map",
-    "runtime~main.js": "/manejador-contactos/static/js/runtime~main.08b4fb3d.js",
-    "runtime~main.js.map": "/manejador-contactos/static/js/runtime~main.08b4fb3d.js.map",
-    "static/js/2.db3fd1cb.chunk.js": "/manejador-contactos/static/js/2.db3fd1cb.chunk.js",
-    "static/js/2.db3fd1cb.chunk.js.map": "/manejador-contactos/static/js/2.db3fd1cb.chunk.js.map",
-    "index.html": "/manejador-contactos/index.html",
-    "precache-manifest.53922d8b8c853514cbaea5e71ec7afdf.js": "/manejador-contactos/precache-manifest.53922d8b8c853514cbaea5e71ec7afdf.js",
-    "service-worker.js": "/manejador-contactos/service-worker.js",
-    "static/css/main.5c49e8b2.chunk.css.map": "/manejador-contactos/static/css/main.5c49e8b2.chunk.css.map",
-    "static/media/main.css": "/manejador-contactos/static/media/MaterialIcons-Regular.a37b0c01.ttf"
+    "main.css": "/app-manejador-contactos/static/css/main.e7ec8770.chunk.css",
+    "main.js": "/app-manejador-contactos/static/js/main.563aef48.chunk.js",
+    "main.js.map": "/app-manejador-contactos/static/js/main.563aef48.chunk.js.map",
+    "runtime~main.js": "/app-manejador-contactos/static/js/runtime~main.a7df159f.js",
+    "runtime~main.js.map": "/app-manejador-contactos/static/js/runtime~main.a7df159f.js.map",
+    "static/js/2.db3fd1cb.chunk.js": "/app-manejador-contactos/static/js/2.db3fd1cb.chunk.js",
+    "static/js/2.db3fd1cb.chunk.js.map": "/app-manejador-contactos/static/js/2.db3fd1cb.chunk.js.map",
+    "index.html": "/app-manejador-contactos/index.html",
+    "precache-manifest.eb8630aa3ae976fefe5b6e02cd34a866.js": "/app-manejador-contactos/precache-manifest.eb8630aa3ae976fefe5b6e02cd34a866.js",
+    "service-worker.js": "/app-manejador-contactos/service-worker.js",
+    "static/css/main.e7ec8770.chunk.css.map": "/app-manejador-contactos/static/css/main.e7ec8770.chunk.css.map",
+    "static/media/main.css": "/app-manejador-contactos/static/media/MaterialIcons-Regular.a37b0c01.ttf"
   }
 }
