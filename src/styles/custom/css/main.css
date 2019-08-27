@@ -3413,7 +3413,9 @@ a.text-dark:hover, a.text-dark:focus {
   border-radius: 5px;
   overflow: hidden;
   position: relative;
-  cursor: pointer; }
+  cursor: pointer;
+  opacity: 1;
+  transition: opacity 300ms; }
   .contact:hover::before {
     content: "ELIMINAR CONTACTO";
     display: flex;
@@ -3458,6 +3460,27 @@ a.text-dark:hover, a.text-dark:focus {
 
 .contact-info__mail::before {
   content: "mail"; }
+
+.delete-contact {
+  opacity: 0; }
+
+.counter-contacts {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #fff;
+  font-size: 18px;
+  border-radius: 5px;
+  height: 38px;
+  margin-bottom: 7px; }
+  .counter-contacts::before {
+    content: "perm_contact_calendar";
+    font-family: 'MaterialIcon';
+    font-size: 24px;
+    margin-right: 5px; }
+  .counter-contacts span {
+    font-weight: 700;
+    margin-left: 4px; }
 
 .outline {
   outline: 1px solid #D56363; }

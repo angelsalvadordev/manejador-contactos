@@ -4,7 +4,7 @@ import ContactsContext from "../context/ContactsContext"
 
 const ContactsGroup = () => {
 
-    const { contacts, search } = useContext(ContactsContext)
+    const [state] = useContext(ContactsContext)
 
     const filterContacts = contact => {
         // concatenar nombre: Ángel Salvador => ángelsalvador 
@@ -13,12 +13,12 @@ const ContactsGroup = () => {
 
         // Quitar tildes y ñ
         completeName = normalizeName(completeName)
-        console.log(completeName)
+
         // Buscar coincidencias de la busqueda
-        return completeName.includes(search)
+        return completeName.includes(state.search)
     }
 
-    // Normalizar nombre: ángelsalvador => angelsalvador
+    //Normalizar nombre: ángelsalvador => angelsalvador
     const normalizeName = name => {
         name = name.replace(/á/gi, "a");
         name = name.replace(/é/gi, "e");
@@ -31,7 +31,7 @@ const ContactsGroup = () => {
 
     return (
         <div className="row">
-            {contacts.filter(filterContacts).map((contact, index) => <Contact key={index} contact={contact} />)}
+            {state.contacts.filter(filterContacts).map((contact, index) => <Contact key={index} contact={contact} />)}
         </div>
     )
 }

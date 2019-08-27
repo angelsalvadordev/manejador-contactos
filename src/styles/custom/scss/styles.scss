@@ -19,7 +19,7 @@ $light: $gray-1;
 $danger: $red-1;
 $border-danger: $red-2;
 
-// Principal Boostrap
+// Principal Boostrap Styles
 @import "../../bootstrap/scss/functions";
 @import "../../bootstrap/scss/variables";
 @import "../../bootstrap/scss/mixins";
@@ -30,13 +30,14 @@ $border-danger: $red-2;
 @import "../../bootstrap/scss/type";
 @import "../../bootstrap/scss/utilities";
 
-// Custom
+// Custom Styles
 @import "./typo";
 
-// Components
+// Custom Components
 @import "./components/Intro";
 @import "./components/Searcher";
 @import "./components/Contact";
+@import "./components/CounterContacts";
 
 .outline{
     outline: 1px solid $red-2;

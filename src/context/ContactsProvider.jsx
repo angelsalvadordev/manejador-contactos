@@ -1,36 +1,25 @@
 // Creando componente Provider
-import React, { useState, useEffect } from "react"
+import React, { useEffect, useReducer } from "react"
+
+import { contactsReducer, initialContacts } from "./store"
 import ContactsContext from "./ContactsContext"
+import { actionAPI } from "./actionsCreators";
 
+// Componente Provider
 const ContactsProvider = props => {
-  const [contacts, setContacts] = useState([])
-  const [search, setSearch] = useState('')
 
-  // Conexion con API y actualizacion de contacts
+  const [state, dispatch] = useReducer(contactsReducer, initialContacts)
+
+  // Conexion con API y actualizacion del store
   useEffect(() => {
     fetch('https://uinames.com/api/?amount=25&region=mexico&ext')
       .then(resp => resp.json())
-      .then(resp => setContacts(resp))
+      .then(resp => dispatch(actionAPI(resp)))
   }, [])
-
-  const searchContact = e => {
-    let word = e.target.value
-    word = word.toLowerCase()
-    setSearch(word)
-  }
-
-  // Filtrar elemento a eliminar, confirmar y actualizar contacts
-  const deleteContact = contactName => {
-    const confirmation = window.confirm('Seguro que desea eliminar este contacto ?')
-    if (confirmation) {
-      const contactFiltered = contacts.filter(contact => contact.name !== contactName)
-      setContacts(contactFiltered)
-    }
-  }
 
   return (
     // Envolver componentes para conexion con store global
-    <ContactsContext.Provider value={{ contacts, search, searchContact, deleteContact }}>
+    <ContactsContext.Provider value={[state, dispatch]}>
       {props.children}
     </ContactsContext.Provider>
   )

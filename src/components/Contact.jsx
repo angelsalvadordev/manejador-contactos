@@ -1,13 +1,15 @@
 import React, { useContext } from 'react'
+
 import ContactsContext from "../context/ContactsContext"
+import { actionRemoveContact } from '../context/actionsCreators';
 
 const Contact = ({ contact }) => {
 
-    const { deleteContact } = useContext(ContactsContext)
-
+    const [state, dispatch] = useContext(ContactsContext)
+    const fullName = contact.name + contact.surname //Para eliminar el contacto exacto
     return (
         <div className="col-12 col-md-6 col-lg-4 mt-2 mb-2">
-            <div className="row no-gutters contact bg-light pt-2 pb-2" onClick={() => deleteContact(contact.name)}>
+            <div className="row no-gutters contact bg-light pt-2 pb-2" onClick={() => dispatch(actionRemoveContact(fullName))}>
                 <div className="col-3 ml-2 d-flex align-items-center justify-content-end contact-image">
                     <img className="contact-image__photo" src={contact.photo} alt={`Imagen de ${contact.name}`} />
                 </div>

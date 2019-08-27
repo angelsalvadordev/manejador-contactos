@@ -4,6 +4,8 @@
     overflow: hidden;
     position: relative;
     cursor: pointer;
+    opacity: 1;
+    transition: opacity 300ms;
 
     &:hover::before{
         content:"ELIMINAR CONTACTO";
@@ -67,4 +69,8 @@
             content:"mail";   
         }
     }
+}
+
+.delete-contact{
+    opacity: 0;
 }
