@@ -9,6 +9,7 @@ import ContactsProvider from "./context/ContactsProvider"
 
 // Styles
 import "./styles/custom/css/main.css"
+import AddContact from './components/AddContact';
 
 const App = () => {
     return (
@@ -17,7 +18,10 @@ const App = () => {
             <div className="container pt-4">
                 <Intro />
                 <CounterContacts />
-                <Searcher />
+                <div className="row no-gutters mb-1 justify-content-between">
+                    <Searcher />
+                    <AddContact />
+                </div>
                 <ContactsGroup />
             </div>
         </ContactsProvider>

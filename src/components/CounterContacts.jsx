@@ -7,7 +7,7 @@ const CounterContacts = () => {
 
   return (
     <div className="row justify-content-center">
-      <div className="col-6 col-md-2 bg-danger counter-contacts">
+      <div className="col-6 col-md-3 col-lg-2 bg-confirm counter-contacts">
         Contactos:<span>{state.contacts.length}</span>
       </div>
     </div>

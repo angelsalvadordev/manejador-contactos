@@ -5,6 +5,8 @@ $gray-3: #7B7B7B;
 $gray-4: #545454;
 $red-1:#F67878;
 $red-2:#D56363;
+$orange: #F69278;
+$blue: #78A6F6;
 
 // Custom Bootstrap
 $font-family-sans-serif: "Segoe UI";
@@ -13,11 +15,26 @@ $h2-font-size: .9rem;
 $headings-font-weight: 700;
 $body-color: $gray-4;
 
-$primary: $gray-4;
+$primary:$gray-4;
 $secondary: $gray-3;
+$gray-light: $gray-2;
 $light: $gray-1;
 $danger: $red-1;
 $border-danger: $red-2;
+$action: $blue;
+$confirm: $orange;
+
+$theme-colors:(
+    "primary":$primary,
+    "secondary": $secondary,
+    "light": $light,
+    "danger": $danger,
+    
+    "gray-light": $gray-light,
+    "border-danger": $border-danger,
+    "action": $action,
+    "confirm": $confirm
+);
 
 // Principal Boostrap Styles
 @import "../../bootstrap/scss/functions";
@@ -36,6 +53,7 @@ $border-danger: $red-2;
 // Custom Components
 @import "./components/Intro";
 @import "./components/Searcher";
+@import "./components/AddContact";
 @import "./components/Contact";
 @import "./components/CounterContacts";
 

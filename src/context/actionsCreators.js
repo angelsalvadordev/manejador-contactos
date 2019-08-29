@@ -14,9 +14,9 @@ export const actionSearch = data => (
   }
 )
 
-export const actionRemoveContact = data => (
+export const actionRemoveContact = id => (
   {
     type: REMOVE_CONTACT,
-    data
+    id
   }
 )

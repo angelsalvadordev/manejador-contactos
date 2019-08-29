@@ -1021,6 +1021,38 @@ button.bg-dark:hover,
 button.bg-dark:focus {
   background-color: #1d2124 !important; }
 
+.bg-gray-light {
+  background-color: #A1A1A1 !important; }
+
+a.bg-gray-light:hover, a.bg-gray-light:focus,
+button.bg-gray-light:hover,
+button.bg-gray-light:focus {
+  background-color: #888888 !important; }
+
+.bg-border-danger {
+  background-color: #D56363 !important; }
+
+a.bg-border-danger:hover, a.bg-border-danger:focus,
+button.bg-border-danger:hover,
+button.bg-border-danger:focus {
+  background-color: #ca3b3b !important; }
+
+.bg-action {
+  background-color: #78A6F6 !important; }
+
+a.bg-action:hover, a.bg-action:focus,
+button.bg-action:hover,
+button.bg-action:focus {
+  background-color: #4886f3 !important; }
+
+.bg-confirm {
+  background-color: #F69278 !important; }
+
+a.bg-confirm:hover, a.bg-confirm:focus,
+button.bg-confirm:hover,
+button.bg-confirm:focus {
+  background-color: #f36b48 !important; }
+
 .bg-white {
   background-color: #fff !important; }
 
@@ -1080,6 +1112,18 @@ button.bg-dark:focus {
 
 .border-dark {
   border-color: #343a40 !important; }
+
+.border-gray-light {
+  border-color: #A1A1A1 !important; }
+
+.border-border-danger {
+  border-color: #D56363 !important; }
+
+.border-action {
+  border-color: #78A6F6 !important; }
+
+.border-confirm {
+  border-color: #F69278 !important; }
 
 .border-white {
   border-color: #fff !important; }
@@ -3331,6 +3375,30 @@ a.text-light:hover, a.text-light:focus {
 a.text-dark:hover, a.text-dark:focus {
   color: #121416 !important; }
 
+.text-gray-light {
+  color: #A1A1A1 !important; }
+
+a.text-gray-light:hover, a.text-gray-light:focus {
+  color: #7b7b7b !important; }
+
+.text-border-danger {
+  color: #D56363 !important; }
+
+a.text-border-danger:hover, a.text-border-danger:focus {
+  color: #ba3232 !important; }
+
+.text-action {
+  color: #78A6F6 !important; }
+
+a.text-action:hover, a.text-action:focus {
+  color: #3077f1 !important; }
+
+.text-confirm {
+  color: #F69278 !important; }
+
+a.text-confirm:hover, a.text-confirm:focus {
+  color: #f15830 !important; }
+
 .text-body {
   color: #545454 !important; }
 
@@ -3393,10 +3461,12 @@ a.text-dark:hover, a.text-dark:focus {
     content: "search";
     display: inline-block;
     font-family: 'MaterialIcon';
-    margin-right: 2px;
+    margin-left: 7px;
     color: #fff;
     font-size: 24px; }
   .searcher__input {
+    width: 100%;
+    background-color: transparent;
     display: inline-block;
     outline: none;
     border: none;
@@ -3404,34 +3474,23 @@ a.text-dark:hover, a.text-dark:focus {
     .searcher__input::placeholder {
       color: #fff; }
 
-.search-icon {
-  border-radius: 5px 0 0 5px;
-  font-size: 24px; }
+.add-contact {
+  display: flex;
+  justify-content: flex-end; }
+  .add-contact__icon {
+    width: 80%;
+    border-radius: 5px;
+    font-size: 25px;
+    text-align: center;
+    cursor: pointer; }
 
 .contact {
   border: 1px solid #A1A1A1;
   border-radius: 5px;
-  overflow: hidden;
   position: relative;
   cursor: pointer;
   opacity: 1;
   transition: opacity 300ms; }
-  .contact:hover::before {
-    content: "ELIMINAR CONTACTO";
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    color: #fff;
-    font-weight: 700;
-    background-color: #F67878;
-    border: 1px solid #D56363;
-    border-radius: 5px;
-    position: absolute;
-    z-index: 10;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%; }
 
 .contact-image {
   padding-right: 10px !important; }
@@ -3461,8 +3520,69 @@ a.text-dark:hover, a.text-dark:focus {
 .contact-info__mail::before {
   content: "mail"; }
 
-.delete-contact {
-  opacity: 0; }
+.contact-options {
+  cursor: initial;
+  display: none;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border-radius: 5px;
+  z-index: 4; }
+  .contact-options__edit, .contact-options__delete {
+    font-size: 1rem;
+    font-weight: 700;
+    cursor: pointer; }
+    .contact-options__edit::before, .contact-options__edit::before, .contact-options__delete::before, .contact-options__delete::before {
+      display: inline-block;
+      font-family: "MaterialIcon";
+      font-size: 30px;
+      font-weight: 400; }
+  .contact-options__edit::before {
+    content: 'edit'; }
+  .contact-options__delete {
+    color: #D56363; }
+    .contact-options__delete::before {
+      content: 'delete';
+      color: #dc3545; }
+  .contact-options__back {
+    position: absolute;
+    font-size: 25px;
+    right: 0;
+    bottom: -3px;
+    cursor: pointer; }
+
+.show-options {
+  display: flex; }
+
+.contact-edit {
+  cursor: initial;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border-radius: 5px;
+  z-index: 6; }
+
+.contact-edit-form {
+  margin-left: 20px; }
+  .contact-edit-form div {
+    height: 25px; }
+  .contact-edit-form label {
+    font-size: 20px;
+    line-height: 25px;
+    color: #7B7B7B;
+    margin: 0;
+    height: 25px; }
+  .contact-edit-form input {
+    background-color: transparent;
+    border: none;
+    border-bottom: 1px solid #A1A1A1;
+    font-size: 14px; }
+    .contact-edit-form input:focus {
+      outline: none; }
 
 .counter-contacts {
   display: flex;

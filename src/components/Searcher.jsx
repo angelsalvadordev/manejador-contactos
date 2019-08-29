@@ -6,14 +6,11 @@ import { actionSearch } from '../context/actionsCreators';
 const Searcher = () => {
     const [state, dispatch] = useContext(ContactsContext)
     return (
-        <div className="row">
-            <div className="col ">
-                <div className="col d-flex bg-secondary searcher mb-1">
-                    <input onKeyUp={e => dispatch(actionSearch(e.target.value))} className="col searcher__input bg-secondary text-white" type="text" placeholder="Buscar contacto" />
-                </div>
-            </div>
+        // <div className="col-10 mb-1">
+        <div className="col-10 col-md-11 d-flex bg-secondary searcher">
+            <input onKeyUp={e => dispatch(actionSearch(e.target.value))} className="searcher__input text-white" type="text" placeholder="Buscar contacto" />
         </div>
-
+        // </div>
     )
 }
 

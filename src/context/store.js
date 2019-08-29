@@ -1,5 +1,4 @@
 import { GET_API, REMOVE_CONTACT, SEARCH_CONTACT, } from "./actions"
-import { useReducer } from "react"
 
 export const initialContacts = {
   contacts: [],
@@ -22,8 +21,7 @@ export const contactsReducer = (state, action) => {
         return {
           ...state,
           contacts: state.contacts.filter(contact => {
-            const fullName = contact.name + contact.surname //Nombre completo para filtro exacto
-            return fullName !== action.data
+            return contact.id !== action.id
           })
         }
       }
