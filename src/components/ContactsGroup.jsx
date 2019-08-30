@@ -7,15 +7,13 @@ const ContactsGroup = () => {
     const [state] = useContext(ContactsContext)
 
     const filterContacts = contact => {
-        // concatenar nombre: Ángel Salvador => ángelsalvador 
-        let completeName = `${contact.name} ${contact.surname}`
-        completeName = completeName.toLowerCase()
+        let name = contact.name.toLowerCase()
 
         // Quitar tildes y ñ
-        completeName = normalizeName(completeName)
+        name = normalizeName(name)
 
         // Buscar coincidencias de la busqueda
-        return completeName.includes(state.search)
+        return name.includes(state.search)
     }
 
     //Normalizar nombre: ángelsalvador => angelsalvador

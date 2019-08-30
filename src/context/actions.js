@@ -1,3 +1,5 @@
 export const SEARCH_CONTACT = "SEARCH_CONTACT"
 export const REMOVE_CONTACT = "REMOVE_CONTACT"
 export const GET_API = "GET_API"
+export const EDIT_CONTACT = "EDIT_CONTACT"
+export const DISABLE_SEARCHER = "DISABLE_SEARCHER"

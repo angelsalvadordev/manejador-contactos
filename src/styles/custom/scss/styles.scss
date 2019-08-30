@@ -54,8 +54,10 @@ $theme-colors:(
 @import "./components/Intro";
 @import "./components/Searcher";
 @import "./components/AddContact";
-@import "./components/Contact";
 @import "./components/CounterContacts";
+@import "./components/Contact";
+@import "./components/ContactOption";
+@import "./components/EditorContact";
 
 .outline{
     outline: 1px solid $red-2;

@@ -15,7 +15,11 @@ const ContactsProvider = props => {
     fetch('https://uinames.com/api/?amount=25&region=mexico&ext')
       .then(resp => resp.json())
       .then(resp => {
-        resp.forEach((data, id) => data.id = id);
+        resp.forEach((data, id) => {
+          data.id = id
+          data.name = `${data.name} ${data.surname}`
+          delete data.surname
+        });
         return dispatch(actionAPI(resp))
       })
   }, [])
