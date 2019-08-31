@@ -1,4 +1,12 @@
-import { GET_API, SEARCH_CONTACT, EDIT_CONTACT, DISABLE_SEARCHER, ADD_CONTACT, REMOVE_CONTACT } from "./actions";
+import {
+  GET_API,
+  SEARCH_CONTACT,
+  EDIT_CONTACT,
+  DISABLE_SEARCHER,
+  FORM_ADD_CONTACT,
+  ADD_CONTACT,
+  REMOVE_CONTACT,
+} from "./actions";
 
 export const actionAPI = data => (
   {
@@ -28,6 +36,13 @@ export const actionDisabledSearcher = data => (
   }
 )
 
+export const actionFormAddContact = data => (
+  {
+    type: FORM_ADD_CONTACT,
+    data
+  }
+)
+
 export const actionAddContact = data => (
   {
     type: ADD_CONTACT,
@@ -41,6 +56,5 @@ export const actionRemoveContact = id => (
     id
   }
 )
-
 
 

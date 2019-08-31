@@ -1,0 +1,58 @@
+.new-contact{
+  border: 1px solid $gray-2;
+  border-radius: 5px;
+  position: relative;
+  cursor: pointer;
+  opacity: 1;
+  transition: opacity 300ms;
+}
+
+.new-contact-form{
+  margin-left: 20px;
+  
+  & div{
+      height: 25px;
+  }
+
+  & label{
+      font-size: 22px;
+      line-height: 25px;
+      color: $secondary;
+      margin: 0;
+      height: 25px;
+  }
+  
+  & input[type="text"]{
+      background-color: transparent;
+      border: none;
+      border-bottom: 1px solid $gray-light;
+      font-size: 14px;
+      margin-left: 3px;
+
+      &:focus{
+          outline: none;
+      }
+  }
+
+  &__close, &__send{
+      position: absolute;
+      border: none;
+      color: $white;
+
+      &:focus, &:focus{
+          outline: none;
+      }
+  }
+
+  &__close{
+      right: 0;
+      top: 0;
+      border-radius: 0 5px 0 5px;
+  }
+
+  &__send{
+      right: 0;
+      bottom: 0;
+      border-radius: 5px 0 5px 0;
+  }
+}

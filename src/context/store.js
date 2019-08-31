@@ -1,9 +1,18 @@
-import { GET_API, SEARCH_CONTACT, EDIT_CONTACT, DISABLE_SEARCHER, ADD_CONTACT, REMOVE_CONTACT } from "./actions"
+import {
+  GET_API,
+  SEARCH_CONTACT,
+  EDIT_CONTACT,
+  DISABLE_SEARCHER,
+  FORM_ADD_CONTACT,
+  ADD_CONTACT,
+  REMOVE_CONTACT,
+} from "./actions"
 
 export const initialContacts = {
   contacts: [],
   search: "",
-  isSearcherDisabled: false
+  isSearcherDisabled: false,
+  isFormAddContact: false,
 }
 
 //Reducer
@@ -38,15 +47,23 @@ export const contactsReducer = (state, action) => {
       }
 
     case DISABLE_SEARCHER:
+      console.log(action.data)
       return {
         ...state,
         isSearcherDisabled: action.data
       }
+    case FORM_ADD_CONTACT:
+      return {
+        ...state,
+        isFormAddContact: action.data,
+      }
 
     case ADD_CONTACT:
-      // Pendiente logica para agregar nuevo contacto
+      action.data.id = state.contacts.length
+      state.contacts.unshift(action.data)
+      console.log(state.contacts)
       return {
-        ...state
+        ...state,
       }
 
     case REMOVE_CONTACT:

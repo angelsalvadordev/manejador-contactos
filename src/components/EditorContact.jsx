@@ -35,7 +35,7 @@ const EditorContact = ({ contact, setShowEditor, setShowOptions }) => {
   }
 
   return (
-    <div className={`contact-edit d-flex align-items-center row no-gutters bg-light`}>
+    <div className="contact-edit d-flex align-items-center row no-gutters bg-light">
       <div className="col-12">
         <form action="#" className="contact-edit-form" onSubmit={handlerEditContact}>
 

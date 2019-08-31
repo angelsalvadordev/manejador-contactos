@@ -1,6 +1,7 @@
 import React, { useContext } from 'react'
 import Contact from './Contact';
 import ContactsContext from "../context/ContactsContext"
+import NewContact from './NewContact';
 
 const ContactsGroup = () => {
 
@@ -27,6 +28,11 @@ const ContactsGroup = () => {
 
     return (
         <div className="row">
+            {
+                state.isFormAddContact
+                    ? <NewContact />
+                    : null
+            }
             {
                 state.contacts
                     .filter(filterContacts)

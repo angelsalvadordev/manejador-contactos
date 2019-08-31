@@ -3471,7 +3471,7 @@ a.text-confirm:hover, a.text-confirm:focus {
     display: inline-block;
     outline: none;
     border: none;
-    padding: 5px; }
+    padding: 5px 5px 5px 4px; }
     .searcher__input::placeholder {
       color: #fff; }
 
@@ -3484,6 +3484,47 @@ a.text-confirm:hover, a.text-confirm:focus {
     font-size: 25px;
     text-align: center;
     cursor: pointer; }
+
+.new-contact {
+  border: 1px solid #A1A1A1;
+  border-radius: 5px;
+  position: relative;
+  cursor: pointer;
+  opacity: 1;
+  transition: opacity 300ms; }
+
+.new-contact-form {
+  margin-left: 20px; }
+  .new-contact-form div {
+    height: 25px; }
+  .new-contact-form label {
+    font-size: 22px;
+    line-height: 25px;
+    color: #7B7B7B;
+    margin: 0;
+    height: 25px; }
+  .new-contact-form input[type="text"] {
+    background-color: transparent;
+    border: none;
+    border-bottom: 1px solid #A1A1A1;
+    font-size: 14px;
+    margin-left: 3px; }
+    .new-contact-form input[type="text"]:focus {
+      outline: none; }
+  .new-contact-form__close, .new-contact-form__send {
+    position: absolute;
+    border: none;
+    color: #fff; }
+    .new-contact-form__close:focus, .new-contact-form__close:focus, .new-contact-form__send:focus, .new-contact-form__send:focus {
+      outline: none; }
+  .new-contact-form__close {
+    right: 0;
+    top: 0;
+    border-radius: 0 5px 0 5px; }
+  .new-contact-form__send {
+    right: 0;
+    bottom: 0;
+    border-radius: 5px 0 5px 0; }
 
 .counter-contacts {
   display: flex;
