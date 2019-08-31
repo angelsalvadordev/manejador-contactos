@@ -8,6 +8,7 @@
         }
     }
     &__subtitle{
+        margin-top: -5px;
         font-size: 15px;
 
         @include media-breakpoint-up(md){

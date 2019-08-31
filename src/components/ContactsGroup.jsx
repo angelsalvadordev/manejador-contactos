@@ -4,19 +4,17 @@ import ContactsContext from "../context/ContactsContext"
 
 const ContactsGroup = () => {
 
-    const [state] = useContext(ContactsContext)
+    const [state] = useContext(ContactsContext) // Estado Global
 
     const filterContacts = contact => {
         let name = contact.name.toLowerCase()
 
-        // Quitar tildes y ñ
-        name = normalizeName(name)
+        name = normalizeName(name) // Quitar tildes y ñ
 
-        // Buscar coincidencias de la busqueda
-        return name.includes(state.search)
+        return name.includes(state.search) // Coincidencias de la busqueda
     }
 
-    //Normalizar nombre: ángelsalvador => angelsalvador
+    //Normalizar: ángelsalvador => angelsalvador
     const normalizeName = name => {
         name = name.replace(/á/gi, "a");
         name = name.replace(/é/gi, "e");
@@ -29,7 +27,11 @@ const ContactsGroup = () => {
 
     return (
         <div className="row">
-            {state.contacts.filter(filterContacts).map((contact, index) => <Contact key={index} contact={contact} />)}
+            {
+                state.contacts
+                    .filter(filterContacts)
+                    .map((contact, index) => <Contact key={index} contact={contact} />)
+            }
         </div>
     )
 }

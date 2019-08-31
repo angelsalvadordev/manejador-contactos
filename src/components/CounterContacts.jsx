@@ -1,9 +1,9 @@
 import React, { useContext } from 'react'
+
 import ContactContext from "../context/ContactsContext"
 
 const CounterContacts = () => {
-
-  const [state] = useContext(ContactContext)
+  const [state] = useContext(ContactContext) // Estado Global
 
   return (
     <div className="row justify-content-center">

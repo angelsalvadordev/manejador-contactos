@@ -3450,6 +3450,7 @@ a.text-confirm:hover, a.text-confirm:focus {
       font-size: 30px; } }
 
 .intro__subtitle {
+  margin-top: -5px;
   font-size: 15px; }
   @media (min-width: 768px) {
     .intro__subtitle {

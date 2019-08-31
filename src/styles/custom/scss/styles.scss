@@ -1,4 +1,4 @@
-// Custom Colors
+// Custom Variables
 $gray-1: #EFEFEF;
 $gray-2: #A1A1A1;
 $gray-3: #7B7B7B;
@@ -8,7 +8,9 @@ $red-2:#D56363;
 $orange: #F69278;
 $blue: #78A6F6;
 
-// Custom Bootstrap
+//////////////////////////////////////////////////////
+
+// Replace Bootstrap variables
 $font-family-sans-serif: "Segoe UI";
 $h1-font-size: 1.2rem;
 $h2-font-size: .9rem;
@@ -36,19 +38,23 @@ $theme-colors:(
     "confirm": $confirm
 );
 
-// Principal Boostrap Styles
+//////////////////////////////////////////////////////
+
+// Main Boostrap Styles
 @import "../../bootstrap/scss/functions";
 @import "../../bootstrap/scss/variables";
 @import "../../bootstrap/scss/mixins";
 
-// Optional Bootstrap Styles
+// Bootstrap Components
 @import "../../bootstrap/scss/reboot";
 @import "../../bootstrap/scss/grid";
 @import "../../bootstrap/scss/type";
 @import "../../bootstrap/scss/utilities";
 
-// Custom Styles
-@import "./typo";
+//////////////////////////////////////////////////////
+
+// Main Custom Styles
+@import "./main/typo";
 
 // Custom Components
 @import "./components/Intro";
@@ -59,7 +65,7 @@ $theme-colors:(
 @import "./components/ContactOption";
 @import "./components/EditorContact";
 
+// Debugging
 .outline{
     outline: 1px solid $red-2;
 }
-
