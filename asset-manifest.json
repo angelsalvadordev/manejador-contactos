@@ -1,16 +1,16 @@
 {
   "files": {
-    "main.css": "/app-manejador-contactos/static/css/main.a1a1a898.chunk.css",
-    "main.js": "/app-manejador-contactos/static/js/main.0ed973a9.chunk.js",
-    "main.js.map": "/app-manejador-contactos/static/js/main.0ed973a9.chunk.js.map",
+    "main.css": "/app-manejador-contactos/static/css/main.90d70968.chunk.css",
+    "main.js": "/app-manejador-contactos/static/js/main.358aa18b.chunk.js",
+    "main.js.map": "/app-manejador-contactos/static/js/main.358aa18b.chunk.js.map",
     "runtime~main.js": "/app-manejador-contactos/static/js/runtime~main.a7df159f.js",
     "runtime~main.js.map": "/app-manejador-contactos/static/js/runtime~main.a7df159f.js.map",
     "static/js/2.fe62596c.chunk.js": "/app-manejador-contactos/static/js/2.fe62596c.chunk.js",
     "static/js/2.fe62596c.chunk.js.map": "/app-manejador-contactos/static/js/2.fe62596c.chunk.js.map",
     "index.html": "/app-manejador-contactos/index.html",
-    "precache-manifest.d554524dd81ea3092723a81a48698a8b.js": "/app-manejador-contactos/precache-manifest.d554524dd81ea3092723a81a48698a8b.js",
+    "precache-manifest.bf61ec9a6f0b6fc911e8676668577a8e.js": "/app-manejador-contactos/precache-manifest.bf61ec9a6f0b6fc911e8676668577a8e.js",
     "service-worker.js": "/app-manejador-contactos/service-worker.js",
-    "static/css/main.a1a1a898.chunk.css.map": "/app-manejador-contactos/static/css/main.a1a1a898.chunk.css.map",
+    "static/css/main.90d70968.chunk.css.map": "/app-manejador-contactos/static/css/main.90d70968.chunk.css.map",
     "static/media/main.css": "/app-manejador-contactos/static/media/MaterialIcons-Regular.a37b0c01.ttf"
   }
 }
