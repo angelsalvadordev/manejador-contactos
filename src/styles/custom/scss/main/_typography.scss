@@ -1,0 +1,13 @@
+@font-face {
+  font-family: "MaterialIcon";
+  src: url("../../../../fonts/MaterialIcons-Regular.ttf") format("truetype"),
+    url("../../../../fonts/MaterialIcons-Regular.woff") format("woff"),
+    url("../../../../fonts/MaterialIcons-Regular.woff2") format("woff2");
+
+  font-weight: normal;
+  font-style: normal;
+}
+
+.f-icon {
+  font-family: "MaterialIcon";
+}

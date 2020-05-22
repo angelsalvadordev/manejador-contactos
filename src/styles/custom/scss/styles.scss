@@ -1,23 +1,23 @@
 // Custom Variables
-$gray-1: #EFEFEF;
-$gray-2: #A1A1A1;
-$gray-3: #7B7B7B;
+$gray-1: #efefef;
+$gray-2: #a1a1a1;
+$gray-3: #7b7b7b;
 $gray-4: #545454;
-$red-1:#F67878;
-$red-2:#D56363;
-$orange: #F69278;
-$blue: #78A6F6;
+$red-1: #f67878;
+$red-2: #d56363;
+$orange: #f69278;
+$blue: #78a6f6;
 
 //////////////////////////////////////////////////////
 
 // Replace Bootstrap variables
 $font-family-sans-serif: "Segoe UI";
 $h1-font-size: 1.2rem;
-$h2-font-size: .9rem;
+$h2-font-size: 0.9rem;
 $headings-font-weight: 700;
 $body-color: $gray-4;
 
-$primary:$gray-4;
+$primary: $gray-4;
 $secondary: $gray-3;
 $gray-light: $gray-2;
 $light: $gray-1;
@@ -26,16 +26,15 @@ $border-danger: $red-2;
 $action: $blue;
 $confirm: $orange;
 
-$theme-colors:(
-    "primary":$primary,
-    "secondary": $secondary,
-    "light": $light,
-    "danger": $danger,
-    
-    "gray-light": $gray-light,
-    "border-danger": $border-danger,
-    "action": $action,
-    "confirm": $confirm
+$theme-colors: (
+  "primary": $primary,
+  "secondary": $secondary,
+  "light": $light,
+  "danger": $danger,
+  "gray-light": $gray-light,
+  "border-danger": $border-danger,
+  "action": $action,
+  "confirm": $confirm,
 );
 
 //////////////////////////////////////////////////////
@@ -54,7 +53,7 @@ $theme-colors:(
 //////////////////////////////////////////////////////
 
 // Main Custom Styles
-@import "./main/typo";
+@import "./main/typography";
 
 // Custom Components
 @import "./components/Intro";
@@ -67,6 +66,6 @@ $theme-colors:(
 @import "./components/EditorContact";
 
 // Debugging
-.outline{
-    outline: 1px solid $red-2;
+.outline {
+  outline: 1px solid $red-2;
 }
