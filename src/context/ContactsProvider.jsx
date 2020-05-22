@@ -11,17 +11,9 @@ const ContactsProvider = (props) => {
 
   // Conexion con API y actualizacion del store
   useEffect(() => {
-    fetch("https://randomuser.me/api/?results=25")
+    fetch("https://randomuser.me/api/?results=25&nat=es")
       .then((resp) => resp.json())
-      // .then(({ results }) => console.log(results));
-      .then(({ results }) =>
-        // results.forEach(({id, name}) => {
-        //   data.id.value = id;
-        //   data.name = `${data.name} ${data.surname}`;
-        //   delete data.surname;
-        // });
-        dispatch(actionAPI(results))
-      );
+      .then(({ results }) => dispatch(actionAPI(results)));
   }, []);
 
   return (
