@@ -1,0 +1,23 @@
+{
+  "files": {
+    "main.css": "/app-manejador-contactos/static/css/main.74befe06.chunk.css",
+    "main.js": "/app-manejador-contactos/static/js/main.2af755ae.chunk.js",
+    "main.js.map": "/app-manejador-contactos/static/js/main.2af755ae.chunk.js.map",
+    "runtime-main.js": "/app-manejador-contactos/static/js/runtime-main.c97c95d9.js",
+    "runtime-main.js.map": "/app-manejador-contactos/static/js/runtime-main.c97c95d9.js.map",
+    "static/js/2.1695e26c.chunk.js": "/app-manejador-contactos/static/js/2.1695e26c.chunk.js",
+    "static/js/2.1695e26c.chunk.js.map": "/app-manejador-contactos/static/js/2.1695e26c.chunk.js.map",
+    "index.html": "/app-manejador-contactos/index.html",
+    "precache-manifest.480ffe3ac2653be4238268b175f53a67.js": "/app-manejador-contactos/precache-manifest.480ffe3ac2653be4238268b175f53a67.js",
+    "service-worker.js": "/app-manejador-contactos/service-worker.js",
+    "static/css/main.74befe06.chunk.css.map": "/app-manejador-contactos/static/css/main.74befe06.chunk.css.map",
+    "static/js/2.1695e26c.chunk.js.LICENSE.txt": "/app-manejador-contactos/static/js/2.1695e26c.chunk.js.LICENSE.txt",
+    "static/media/styles.scss": "/app-manejador-contactos/static/media/MaterialIcons-Regular.a37b0c01.ttf"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.c97c95d9.js",
+    "static/js/2.1695e26c.chunk.js",
+    "static/css/main.74befe06.chunk.css",
+    "static/js/main.2af755ae.chunk.js"
+  ]
+}
