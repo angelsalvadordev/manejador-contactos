@@ -42,14 +42,14 @@
     @include media-breakpoint-up(md) {
       font-size: 16px;
     }
+  }
 
-    &::before,
-    &::before {
-      display: inline-block;
-      font-family: "MaterialIcon";
-      margin-right: 6px;
-      color: $gray-2;
-    }
+  &__phone::before,
+  &__mail::before {
+    display: inline-block;
+    font-family: "MaterialIcon";
+    margin-right: 6px;
+    color: $gray-2;
   }
 
   &__phone {

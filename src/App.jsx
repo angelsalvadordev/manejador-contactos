@@ -10,6 +10,7 @@ import AddContact from "./components/AddContact";
 
 // Styles
 import "./styles/custom/scss/styles.scss";
+import ButtonDarkMode from "./components/ButtonDarkMode";
 
 const App = () => {
   return (
@@ -17,8 +18,9 @@ const App = () => {
     <ContactsProvider>
       <div className="container pt-4">
         <Intro />
+        <ButtonDarkMode />
         <CounterContacts />
-        <div className="row no-gutters mb-1 justify-content-between">
+        <div className="row no-gutters mb-2 justify-content-between">
           <Searcher />
           <AddContact />
         </div>

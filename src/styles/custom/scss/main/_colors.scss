@@ -1,0 +1,83 @@
+// @media (prefers-color-scheme: dark) {
+//   body {
+//     background-color: #1c2833;
+//     color: #bbb;
+//   }
+
+//   .contact {
+//     background-color: #bbb !important;
+//     border: 1px solid #333;
+//   }
+
+//   .contact-image__photo {
+//     border: 2px solid #777;
+//   }
+
+//   .contact-info {
+//     color: #1c2833;
+
+//     &__phone::before,
+//     &__mail::before {
+//       color: #1c2833;
+//     }
+//   }
+// }
+
+// Animations
+$transition: color, background-color 0.3s ease;
+
+body {
+  transition: $transition;
+
+  .contact {
+    transition: $transition;
+  }
+
+  .contact-image__photo {
+    transition: $transition;
+  }
+
+  .contact-info {
+    transition: $transition;
+
+    &__phone::before,
+    &__mail::before {
+      transition: $transition;
+    }
+  }
+}
+
+body.dark {
+  background-color: #1c2833;
+  color: #bbb;
+
+  .contact {
+    background-color: #bbb !important;
+    border: 1px solid #333;
+  }
+
+  .contact-image__photo {
+    border: 2px solid #777;
+  }
+
+  .contact-info {
+    color: #1c2833;
+
+    &__phone::before,
+    &__mail::before {
+      color: #1c2833;
+    }
+  }
+
+  .new-contact {
+    background-color: #bbb !important;
+
+    & label {
+      color: #1c2833;
+    }
+
+    & input {
+      color: #1c2833;
+    }
+  }
+}

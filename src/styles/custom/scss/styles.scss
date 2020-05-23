@@ -64,6 +64,9 @@ $theme-colors: (
 @import "./components/Contact";
 @import "./components/ContactOption";
 @import "./components/EditorContact";
+@import "./components/ButtonDarkMode";
+
+@import "./main/colors";
 
 // Debugging
 .outline {
