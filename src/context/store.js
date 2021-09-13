@@ -1,5 +1,5 @@
 import {
-  GET_API,
+  SAVE_CONTACTS,
   SEARCH_CONTACT,
   EDIT_CONTACT,
   DISABLE_SEARCHER,
@@ -15,43 +15,25 @@ export const initialContacts = {
   isFormAddContact: false,
 };
 
-//Reducer
 export const contactsReducer = (state, action) => {
   switch (action.type) {
-    case GET_API: // Agregar datos de API al estado
+    case SAVE_CONTACTS:
       return {
         ...state,
-        contacts: state.contacts.concat(action.data),
+        contacts: [...state.contacts, ...action.data],
       };
     case SEARCH_CONTACT:
-      let word = action.data;
-      word = word.toLowerCase();
       return {
         ...state,
-        search: word,
-      };
-
-    case EDIT_CONTACT:
-      const { id, first, last, phone, email } = action.data;
-      return {
-        ...state,
-        contacts: state.contacts.map((contact) => {
-          if (contact.id === id) {
-            contact.name.first = first;
-            contact.name.last = last;
-            contact.phone = phone;
-            contact.email = email;
-          }
-          return contact;
-        }),
+        search: action.data.toLowerCase(),
       };
 
     case DISABLE_SEARCHER:
-      console.log(action.data);
       return {
         ...state,
         isSearcherDisabled: action.data,
       };
+
     case FORM_ADD_CONTACT:
       return {
         ...state,
@@ -59,19 +41,29 @@ export const contactsReducer = (state, action) => {
       };
 
     case ADD_CONTACT:
-      action.data.id = state.contacts.length;
-      state.contacts.unshift(action.data);
-      console.log(state.contacts);
       return {
         ...state,
+        contacts: [
+          { ...action.data, id: state.contacts.length },
+          ...state.contacts,
+        ],
+        isSearcherDisabled: false,
+        isFormAddContact: false,
+      };
+
+    case EDIT_CONTACT:
+      return {
+        ...state,
+        contacts: state.contacts.map((contact) =>
+          contact.id === action.data.id ? action.data : contact
+        ),
+        isSearcherDisabled: false,
       };
 
     case REMOVE_CONTACT:
       return {
         ...state,
-        contacts: state.contacts.filter((contact) => {
-          return contact.id !== action.id;
-        }),
+        contacts: state.contacts.filter((contact) => contact.id !== action.id),
       };
 
     default:

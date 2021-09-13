@@ -1,25 +1,32 @@
-import React, { useContext } from 'react'
+import React, { useContext } from "react";
 
-import ContactsContext from "../context/ContactsContext"
-import { actionSearch } from '../context/actionsCreators';
+import ContactsContext from "../context/ContactsContext";
+import { actionSearch } from "../context/actionsCreators";
 
 const Searcher = () => {
-    const [state, dispatch] = useContext(ContactsContext)
+  const [state, dispatch] = useContext(ContactsContext);
+  const { isSearcherDisabled } = state;
 
-    return (
-        <div className="col-10 col-md-11 d-flex bg-secondary searcher">
-            {
-                state.isSearcherDisabled
-                    ? <div className="text-white d-flex align-items-center pl-1">Buscador Deshabilitado</div>
-                    : <input
-                        onKeyUp={e => dispatch(actionSearch(e.target.value))}
-                        className="searcher__input text-white"
-                        type="text"
-                        placeholder="Buscar contacto"
-                    />
-            }
-        </div>
-    )
-}
+  const handleSearch = (e) =>
+    !isSearcherDisabled && dispatch(actionSearch(e.target.value));
 
-export default Searcher
+  return (
+    <div
+      className={`col-10 d-flex searcher ${
+        isSearcherDisabled
+          ? "bg-gray-light searcher--disabled"
+          : "bg-secondary "
+      }`}
+    >
+      <input
+        onKeyUp={handleSearch}
+        className="searcher__input text-white"
+        type="text"
+        placeholder="Buscar contacto"
+        {...(isSearcherDisabled && { disabled: true })}
+      />
+    </div>
+  );
+};
+
+export default Searcher;

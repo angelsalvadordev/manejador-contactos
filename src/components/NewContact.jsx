@@ -9,36 +9,38 @@ import {
 const NewContact = () => {
   const [store, dispatch] = useContext(ContactsContext);
 
-  const handlerNewContact = (e) => {
+  const handleNewContact = (e) => {
     e.preventDefault();
     e.stopPropagation();
     const elements = Array.from(e.target.querySelectorAll("div > input"));
 
-    const contactData = {
-      name: {},
-    }; // Almacena datos de modificacion
+    let contactData = {
+      picture: "",
+    };
     elements.forEach((element) => {
-      if (element.name === "name") {
-        let toArr = element.value.split(" ");
-        console.log(toArr);
-        contactData.name.first = toArr[0];
-        contactData.name.last = toArr[1];
-        return;
-      }
-      contactData[element.name] = element.value;
-    }); // {name:"angel",...}
+      let separateName = element.value.split(" ");
+      element.name === "name"
+        ? (contactData = {
+            ...contactData,
+            name: {
+              first: separateName[0],
+              last: separateName[1] || "",
+            },
+          })
+        : (contactData = {
+            ...contactData,
+            [element.name]: element.value,
+          });
+    });
 
-    // Enviando data al reducer
-    dispatch(actionAddContact(contactData)); // Envio de info al reducer
-    dispatch(actionDisabledSearcher(false)); // Habilitando buscador
-    dispatch(actionFormAddContact(false)); // deshabilitar formulario de nuevo contacto
+    dispatch(actionAddContact(contactData));
   };
 
-  const handlerCloseEditor = (e) => {
+  const handleCloseEditor = (e) => {
     if (window.confirm("Seguro que no desea agregar un contacto?")) {
       e.stopPropagation();
-      dispatch(actionDisabledSearcher(false)); // Habilitando buscador
-      dispatch(actionFormAddContact(false)); // deshabilitar formulario de nuevo contacto
+      dispatch(actionDisabledSearcher(false));
+      dispatch(actionFormAddContact(false));
     }
   };
 
@@ -48,7 +50,7 @@ const NewContact = () => {
         <form
           action="#"
           className="new-contact-form"
-          onSubmit={handlerNewContact}
+          onSubmit={handleNewContact}
         >
           <div className="d-flex">
             <label className="f-icon">account_circle</label>
@@ -69,7 +71,7 @@ const NewContact = () => {
             type="button"
             value="close"
             className="new-contact-form__close bg-danger f-icon"
-            onClick={handlerCloseEditor}
+            onClick={handleCloseEditor}
           />
           <input
             type="submit"

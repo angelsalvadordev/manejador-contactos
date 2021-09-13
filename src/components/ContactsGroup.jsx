@@ -1,34 +1,30 @@
 import React, { useContext } from "react";
+
+// Components
 import Contact from "./Contact";
 import ContactsContext from "../context/ContactsContext";
 import NewContact from "./NewContact";
 
+// Utils
+import { normalizeName } from "../helpers/utils";
+
 const ContactsGroup = () => {
-  const [state] = useContext(ContactsContext); // Estado Global
+  const [state] = useContext(ContactsContext);
+  const { contacts, search, isFormAddContact } = state;
 
   const filterContacts = (contact) => {
-    let fullName = `${contact.name.first} ${contact.name.last}`.toLowerCase();
+    const fullName = normalizeName(
+      `${contact.name.first} ${contact.name.last}`.toLowerCase()
+    );
+    const newSearch = normalizeName(search);
 
-    let newName = normalizeName(fullName); // Quitar tildes y ñ
-
-    return newName.includes(state.search); // Coincidencias de la busqueda
-  };
-
-  //Normalizar: ángelsalvador => angelsalvador
-  const normalizeName = (name) => {
-    name = name.replace(/á/gi, "a");
-    name = name.replace(/é/gi, "e");
-    name = name.replace(/í/gi, "i");
-    name = name.replace(/ó/gi, "o");
-    name = name.replace(/ú/gi, "u");
-    name = name.replace(/ñ/gi, "n");
-    return name;
+    return fullName.includes(newSearch);
   };
 
   return (
     <div className="row">
-      {state.isFormAddContact ? <NewContact /> : null}
-      {state.contacts.filter(filterContacts).map((contact, index) => (
+      {isFormAddContact ? <NewContact /> : null}
+      {contacts.filter(filterContacts).map((contact, index) => (
         <Contact key={index} contact={contact} />
       ))}
     </div>

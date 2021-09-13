@@ -1,4 +1,4 @@
-.counter-contacts{
+.counter-contacts {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -8,16 +8,15 @@
   height: 38px;
   margin-bottom: 7px;
 
-  &::before{
+  &::before {
     content: "perm_contact_calendar";
-    font-family: 'MaterialIcon';
+    font-family: "MaterialIcon";
     font-size: 24px;
     margin-right: 5px;
   }
 
-  & span{
+  & span {
     font-weight: 700;
     margin-left: 4px;
-  } 
-
+  }
 }

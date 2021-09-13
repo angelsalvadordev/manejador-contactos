@@ -1,4 +1,4 @@
-.contact-options{
+.contact-options {
   cursor: initial;
   position: absolute;
   top: 0;
@@ -9,40 +9,41 @@
   z-index: 4;
   // transition: opacity 200ms;
 
-  &__edit, &__delete{
-      font-size: 1rem;
-      font-weight: 700;
-      cursor: pointer;
+  &__edit,
+  &__delete {
+    font-size: 1rem;
+    font-weight: 700;
+    cursor: pointer;
 
-      &::before, &::before{
-          display: inline-block;
-          font-family: "MaterialIcon";
-          font-size: 30px;
-          font-weight: 400;
-      }
+    &::before,
+    &::before {
+      display: inline-block;
+      font-family: "MaterialIcon";
+      font-size: 30px;
+      font-weight: 400;
+    }
   }
 
-  &__edit{
-
-      &::before{
-          content:'edit';
-      }
-  }
-  
-  &__delete{
-      color: $border-danger;
-
-      &::before{
-          content:'delete';
-          color: $red;
-      }
+  &__edit {
+    &::before {
+      content: "edit";
+    }
   }
 
-  &__back{
-      position: absolute;
-      font-size: 25px;
-      right: 0;
-      bottom: -3px;
-      cursor: pointer;
+  &__delete {
+    color: $border-danger;
+
+    &::before {
+      content: "delete";
+      color: $red;
+    }
+  }
+
+  &__back {
+    position: absolute;
+    font-size: 25px;
+    right: 0;
+    bottom: -3px;
+    cursor: pointer;
   }
 }

@@ -1,4 +1,4 @@
-.contact-edit{
+.contact-edit {
   cursor: initial;
   position: absolute;
   top: 0;
@@ -9,52 +9,54 @@
   z-index: 6;
 }
 
-.contact-edit-form{
+.contact-edit-form {
   margin-left: 20px;
-  
-  & div{
-      height: 25px;
+
+  & div {
+    height: 25px;
   }
 
-  & label{
-      font-size: 22px;
-      line-height: 25px;
-      color: $secondary;
-      margin: 0;
-      height: 25px;
-  }
-  
-  & input[type="text"]{
-      background-color: transparent;
-      border: none;
-      border-bottom: 1px solid $gray-light;
-      font-size: 14px;
-      margin-left: 3px;
-
-      &:focus{
-          outline: none;
-      }
+  & label {
+    font-size: 22px;
+    line-height: 25px;
+    color: $secondary;
+    margin: 0;
+    height: 25px;
   }
 
-  &__close, &__send{
-      position: absolute;
-      border: none;
-      color: $white;
+  & input[type="text"] {
+    background-color: transparent;
+    border: none;
+    border-bottom: 1px solid $gray-light;
+    font-size: 14px;
+    margin-left: 3px;
 
-      &:focus, &:focus{
-          outline: none;
-      }
+    &:focus {
+      outline: none;
+    }
   }
 
-  &__close{
-      right: 0;
-      top: -8px;
-      border-radius: 0 5px 0 5px;
+  &__close,
+  &__send {
+    position: absolute;
+    border: none;
+    color: $white;
+
+    &:focus,
+    &:focus {
+      outline: none;
+    }
   }
 
-  &__send{
-      right: 0;
-      bottom: -8px;
-      border-radius: 5px 0 5px 0;
+  &__close {
+    right: 0;
+    top: -8px;
+    border-radius: 0 5px 0 5px;
+  }
+
+  &__send {
+    right: 0;
+    bottom: -8px;
+    border-radius: 5px 0 5px 0;
   }
 }

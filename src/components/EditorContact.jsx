@@ -7,40 +7,48 @@ import {
 } from "../context/actionsCreators";
 
 const EditorContact = ({ contact, setShowEditor, setShowOptions }) => {
-  const { id, name, phone, email } = contact;
+  const { id, name, phone, email, picture } = contact;
+  const formattedName = `${name.first} ${name.last}`;
 
-  // Store global
   const [store, dispatch] = useContext(ContactsContext);
 
   const handlerEditContact = (e) => {
     e.preventDefault();
+    e.stopPropagation();
     const elements = Array.from(e.target.querySelectorAll("div > input"));
 
-    const contactData = {}; // Almacena datos de modificacion
-    elements.forEach((element) => {
-      if (element.name === "name") {
-        let toArr = element.value.split(" ");
-        console.log(toArr);
-        contactData.name.first = toArr[0];
-        contactData.name.last = toArr[1];
-        return;
-      }
-      contactData[element.name] = element.value;
-    }); // {name:"angel",...}
+    let contactData = {
+      id,
+      picture,
+    };
 
-    // Enviando data al reducer
+    elements.forEach((element) => {
+      let separateName = element.value.split(" ");
+      element.name === "name"
+        ? (contactData = {
+            ...contactData,
+            name: {
+              first: separateName[0],
+              last: separateName[1] || "",
+            },
+          })
+        : (contactData = {
+            ...contactData,
+            [element.name]: element.value,
+          });
+    });
+
     dispatch(actionEditContact({ id, ...contactData }));
 
-    setShowEditor(false); // Cerrando editor
-    setShowOptions(false); // Cerrando opciones
-    dispatch(actionDisabledSearcher(false)); // Habilitando buscador
+    setShowEditor(false);
+    setShowOptions(false);
   };
 
   const handlerCloseEditor = (e) => {
     if (window.confirm("Seguro que deseas salir del modo editar?")) {
       e.stopPropagation();
       setShowEditor(false);
-      dispatch(actionDisabledSearcher(false)); // Habilitando buscador
+      dispatch(actionDisabledSearcher(false));
       setShowOptions(false);
     }
   };
@@ -59,7 +67,7 @@ const EditorContact = ({ contact, setShowEditor, setShowOptions }) => {
               type="text"
               name="name"
               placeholder="Name"
-              defaultValue={name}
+              defaultValue={formattedName}
             />
           </div>
 

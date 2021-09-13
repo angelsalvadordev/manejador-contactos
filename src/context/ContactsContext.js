@@ -1,5 +1,5 @@
-import React from "react"
+import React from "react";
 
-const ContactsContext = React.createContext()
+const ContactsContext = React.createContext();
 
-export default ContactsContext
+export default ContactsContext;

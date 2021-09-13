@@ -8,8 +8,6 @@ $red-2: #d56363;
 $orange: #f69278;
 $blue: #78a6f6;
 
-//////////////////////////////////////////////////////
-
 // Replace Bootstrap variables
 $font-family-sans-serif: "Segoe UI";
 $h1-font-size: 1.2rem;
@@ -37,8 +35,6 @@ $theme-colors: (
   "confirm": $confirm,
 );
 
-//////////////////////////////////////////////////////
-
 // Main Boostrap Styles
 @import "../../bootstrap/scss/functions";
 @import "../../bootstrap/scss/variables";
@@ -49,8 +45,6 @@ $theme-colors: (
 @import "../../bootstrap/scss/grid";
 @import "../../bootstrap/scss/type";
 @import "../../bootstrap/scss/utilities";
-
-//////////////////////////////////////////////////////
 
 // Main Custom Styles
 @import "./main/typography";
